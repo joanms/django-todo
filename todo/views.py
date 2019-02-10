@@ -40,4 +40,4 @@ def toggle_status(request, id):
     item = get_object_or_404(Item, pk=id)
     item.done = not item.done
     item.save()
-    return redirect(get_todo_list)
+    return redirect(get_todo_list) 
