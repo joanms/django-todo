@@ -29,6 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME'), 
                 os.environ.get('HOSTNAME')]
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'todo'
 ]
 
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -51,7 +53,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
 ROOT_URLCONF = 'django_todo.urls'
+
 
 TEMPLATES = [
     {
@@ -69,8 +73,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'django_todo.wsgi.application'
 
+WSGI_APPLICATION = 'django_todo.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
@@ -81,7 +85,6 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
-
 
 DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
 
